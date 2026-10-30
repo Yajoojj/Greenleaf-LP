@@ -1,0 +1,79 @@
+/*
+ * Tokens do GreenLeaf.
+ * Marca e estados vêm do design system do app (Artefatos, tabela 3, e
+ * docs/design-system.md do Greenleaf-Mobile). A base escura oliva, o creme
+ * e o sálvia vêm do Ori; a dupla sans + serifada itálica vem do Halo.
+ */
+:root {
+  /* Base escura (seções imersivas) */
+  --ink-950: #0a0d08;
+  --ink-900: #0f130c;
+  --ink-850: #141a10;
+  --ink-800: #1a2114;
+  --ink-700: #252e1d;
+  --line-dark: rgba(242, 241, 233, 0.1);
+  --line-dark-strong: rgba(242, 241, 233, 0.2);
+  --text-on-dark: #f2f1e9;
+  --muted-on-dark: #a6ac99;
+
+  /* Base clara (seções editoriais) */
+  --cream: #f2f1e9;
+  --cream-100: #eae8dc;
+  --cream-200: #dcd9c8;
+  --paper: #f7f6f0;
+  --ink: #12150c;
+  --ink-muted: #4a5140;
+  --line-light: rgba(18, 21, 12, 0.12);
+
+  /* Acentos */
+  --sage: #a9be8f;
+  --sage-300: #c8d7b2;
+
+  /* Marca GreenLeaf (app) */
+  --leaf: #57b846;
+  --leaf-bright: #7ec86a;
+  --leaf-700: #2f7a28;
+  --leaf-800: #24611f;
+  --leaf-900: #1f541a;
+
+  /* Estados do diagnóstico (cor + ícone + texto, nunca só cor) */
+  --sadia: #57b846;
+  --sadia-ink: #24611f;
+  --sadia-bg: #eff8ec;
+  --leve: #f2b134;
+  --leve-ink: #7a5100;
+  --leve-bg: #fdf3dc;
+  --moderada: #f07c1e;
+  --moderada-ink: #943f00;
+  --moderada-bg: #fdeadb;
+  --grave: #ff5d5d;
+  --grave-ink: #a11d1d;
+  --grave-bg: #ffe7e7;
+
+  /* Tipografia */
+  --font-sans: 'Geist', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+  --font-app: 'Montserrat', var(--font-sans);
+  --fs-display: clamp(2.55rem, 1.45rem + 4.4vw, 5.4rem);
+  --fs-h2: clamp(2.1rem, 1.45rem + 2.7vw, 4.1rem);
+  --fs-h3: clamp(1.15rem, 1.08rem + 0.35vw, 1.4rem);
+  --fs-lead: clamp(1.02rem, 0.97rem + 0.25vw, 1.2rem);
+  --fs-small: 0.875rem;
+
+  /* Layout */
+  --container: 1320px;
+  --gutter: clamp(16px, 4vw, 64px);
+  --section-y: clamp(84px, 5vw + 48px, 152px);
+  --header-h: 80px;
+
+  /* Forma */
+  --radius-sm: 10px;
+  --radius: 18px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+
+  /* Movimento */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 220ms;
+}

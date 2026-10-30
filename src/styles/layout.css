@@ -1,0 +1,138 @@
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section { position: relative; padding-block: var(--section-y); }
+.section--light { background: var(--cream); color: var(--ink); }
+.section--light + .section--light { border-top: 1px solid var(--line-light); }
+
+.section-head { display: grid; gap: 22px; margin-bottom: clamp(40px, 5vw, 72px); max-width: 860px; }
+.section-head--split {
+  max-width: none;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  align-items: end;
+  gap: clamp(24px, 5vw, 96px);
+}
+.section-head--split .eyebrow { margin-bottom: 22px; }
+@media (max-width: 860px) {
+  .section-head--split { grid-template-columns: 1fr; gap: 20px; }
+}
+
+/* ---------- Cabeçalho: pílula flutuante (Ori) ---------- */
+.site-header {
+  position: fixed; inset: 14px 0 auto; z-index: 100;
+  padding-inline: clamp(12px, 2.4vw, 32px);
+  pointer-events: none;
+}
+.site-header__bar {
+  pointer-events: auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  max-width: 1240px; margin-inline: auto;
+  min-height: 60px; padding: 8px 8px 8px 18px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: background 0.35s var(--ease), border-color 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.site-header.is-scrolled .site-header__bar,
+.site-header.is-open .site-header__bar {
+  background: rgba(15, 19, 12, 0.78);
+  border-color: var(--line-dark);
+  backdrop-filter: blur(16px) saturate(1.3);
+  -webkit-backdrop-filter: blur(16px) saturate(1.3);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+}
+.site-header__brand { display: inline-flex; align-items: center; min-height: 44px; }
+
+.logo { display: inline-flex; align-items: center; gap: 10px; }
+.logo__mark { width: 34px; height: 34px; border-radius: 10px; }
+.logo__word { font-weight: 700; font-size: 1.15rem; letter-spacing: -0.03em; }
+
+.site-nav ul { display: flex; gap: 2px; }
+.site-nav__link {
+  display: inline-flex; align-items: center; min-height: 40px;
+  padding: 8px 14px; border-radius: 999px;
+  font-size: 0.9rem; color: var(--muted-on-dark);
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.site-nav__link:hover { color: var(--text-on-dark); background: rgba(242, 241, 233, 0.07); }
+.site-nav__link[aria-current='true'] { color: var(--text-on-dark); background: rgba(242, 241, 233, 0.1); }
+
+.site-header__actions { display: flex; align-items: center; gap: 8px; }
+.site-header__cta { min-height: 44px; padding: 10px 18px; font-size: 0.9rem; }
+
+.lang { display: inline-flex; padding: 3px; border-radius: 999px; border: 1px solid var(--line-dark); }
+.lang__btn {
+  min-width: 40px; min-height: 36px; padding: 0 10px;
+  border-radius: 999px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em;
+  color: var(--muted-on-dark);
+}
+.lang__btn[aria-pressed='true'] { background: var(--cream); color: var(--ink); }
+
+.menu-toggle {
+  display: none; width: 44px; height: 44px; border-radius: 50%;
+  background: var(--cream); place-items: center;
+}
+.menu-toggle span,
+.menu-toggle span::before {
+  display: block; width: 16px; height: 1.6px; background: var(--ink);
+  transition: transform var(--dur) var(--ease);
+}
+.menu-toggle span { position: relative; transform: translateY(-3px); }
+.menu-toggle span::before { content: ''; position: absolute; top: 6px; }
+.site-header.is-open .menu-toggle span { transform: translateY(0) rotate(45deg); }
+.site-header.is-open .menu-toggle span::before { transform: translateY(-6px) rotate(-90deg); }
+
+.mobile-menu {
+  pointer-events: auto;
+  max-width: 1240px; margin: 10px auto 0;
+  border-radius: 28px;
+  background: rgba(15, 19, 12, 0.94);
+  border: 1px solid var(--line-dark);
+  backdrop-filter: blur(16px);
+  padding: 14px 14px 18px;
+  max-height: calc(100dvh - 110px); overflow: auto;
+}
+.mobile-menu ul { display: grid; }
+.mobile-menu li { animation: menu-in 0.45s var(--ease-out) both; animation-delay: calc(var(--i) * 35ms); }
+.mobile-menu li a {
+  display: flex; align-items: center; min-height: 52px; padding: 0 12px;
+  font-size: 1.6rem; font-weight: 600; letter-spacing: -0.03em;
+  border-bottom: 1px solid var(--line-dark);
+}
+.mobile-menu__foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+@keyframes menu-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 1099px) {
+  .site-nav, .site-header__actions > .lang, .site-header__cta { display: none; }
+  .menu-toggle { display: grid; }
+}
+@media (min-width: 1100px) { .mobile-menu { display: none; } }
+
+/* ---------- Rodapé ---------- */
+.site-footer { background: var(--ink-950); border-top: 1px solid var(--line-dark); padding: 72px 0 32px; overflow: hidden; }
+.site-footer__top { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 40px; }
+.site-footer__brand p { margin-top: 16px; color: var(--muted-on-dark); max-width: 30ch; }
+.site-footer__nav ul { display: grid; gap: 4px; }
+.site-footer__nav a, .site-footer__links li a {
+  display: inline-flex; min-height: 36px; align-items: center;
+  color: var(--muted-on-dark); transition: color var(--dur) var(--ease);
+}
+.site-footer__nav a:hover, .site-footer__links li a:hover { color: var(--text-on-dark); }
+.site-footer__links { display: grid; gap: 16px; align-content: start; justify-items: start; }
+.site-footer__word {
+  margin: 48px 0 18px;
+  font-size: clamp(4.5rem, 19vw, 17rem); font-weight: 700; letter-spacing: -0.07em; line-height: 0.85;
+  background: linear-gradient(180deg, rgba(126, 200, 106, 0.22), rgba(126, 200, 106, 0));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  user-select: none;
+}
+.site-footer__bottom {
+  display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between;
+  padding-top: 24px; border-top: 1px solid var(--line-dark);
+  font-size: var(--fs-small); color: var(--muted-on-dark);
+}
+.site-footer__bottom a { color: var(--text-on-dark); }
+@media (max-width: 860px) { .site-footer__top { grid-template-columns: 1fr; } }
