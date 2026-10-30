@@ -228,7 +228,6 @@ export function Vision() {
             <li key={s.label} data-reveal style={{ transitionDelay: `${i * 80}ms` }}><strong>{s.value}</strong><span>{s.label}</span></li>
           ))}
         </ul>
-        <p className="vision__honesty">{vision.honesty}</p>
         <p className="vision__source">{vision.source}</p>
       </div>
     </section>

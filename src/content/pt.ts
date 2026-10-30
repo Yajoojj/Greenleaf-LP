@@ -221,8 +221,6 @@ export const pt: Content = {
       { value: '78%', label: 'das bacterioses encontradas no teste (revocação)' },
       { value: '95,5%', label: 'das folhas sem bacteriose descartadas corretamente' },
     ],
-    honesty:
-      'A meta de encontrar pelo menos 90% das bacterioses ainda não foi atingida, e a IA ainda não foi testada com folhas do Vale do Ribeira. O resultado é uma estimativa e não substitui um agrônomo.',
     hint: 'Arraste para inclinar as camadas',
     source: 'Imagens ilustrativas geradas por computador; respostas reais da IA v2 (modelo greenleaf_effb0-2026-10-28). As camadas HSV e de segmentação são calculadas aqui, no navegador, para ilustrar a etapa.',
   },

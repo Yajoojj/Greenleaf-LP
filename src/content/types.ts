@@ -52,7 +52,7 @@ export interface Content {
     risk: { low: string; medium: string; high: string; scale: string };
     results: { sadia: string; leve: string; moderada: string; grave: string; other: string };
     stats: { value: string; label: string }[];
-    honesty: string; hint: string; source: string;
+    hint: string; source: string;
   };
   app: {
     eyebrow: string; title: Title; lead: string;

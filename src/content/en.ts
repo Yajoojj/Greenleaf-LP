@@ -213,8 +213,6 @@ export const en: Content = {
       { value: '78%', label: 'of blight cases found in testing (recall)' },
       { value: '95.5%', label: 'of blight-free leaves correctly ruled out' },
     ],
-    honesty:
-      'The goal of finding at least 90% of blight cases has not been reached yet, and the AI has not yet been tested on leaves from the Ribeira Valley. The result is an estimate and does not replace an agronomist.',
     hint: 'Drag to tilt the layers',
     source: 'Computer-generated illustrative images; real AI v2 responses (model greenleaf_effb0-2026-10-28). The HSV and segmentation layers are computed here, in the browser, to illustrate the step.',
   },
