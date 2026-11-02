@@ -6,7 +6,6 @@ Projeto Integrador — Desenvolvimento de Software Multiplataforma, **FATEC Regi
 
 - App: https://greenleaf-mobile.vercel.app/inicio ([Greenleaf-Mobile](https://github.com/Yajoojj/Greenleaf-Mobile))
 - IA: [Axios_Cassava_IA](https://github.com/Yajoojj/Axios_Cassava_IA)
-- Substitui a landing anterior ([Axis_equipe](https://github.com/Marcelo-18a/Axis_equipe)).
 
 ## Executar
 
