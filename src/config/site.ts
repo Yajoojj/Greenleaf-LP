@@ -1,4 +1,4 @@
-/** Destinos e contatos centralizados (mesma ideia do `site.ts` do k9-lp). */
+/** Destinos e contatos centralizados. */
 export const site = {
   appUrl: 'https://greenleaf-mobile.vercel.app/inicio',
   repos: {

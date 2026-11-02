@@ -2,7 +2,7 @@ import { useId, useState } from 'react';
 import { useLanguage } from '../content/Language';
 import { Eyebrow, Heading } from '../components/Primitives';
 
-/** Acordeão acessível com abertura exclusiva (mesmo comportamento do FAQ do k9-lp). */
+/** Acordeão acessível com abertura exclusiva. */
 export function Faq() {
   const { content: { faq } } = useLanguage();
   const [open, setOpen] = useState<number | null>(0);

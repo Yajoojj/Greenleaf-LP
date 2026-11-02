@@ -4,7 +4,7 @@ import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 /**
  * Infraestrutura comum das cenas: renderer com densidade de pixels limitada,
  * ambiente PBR, redimensionamento, pausa fora da tela/aba oculta, ~30–60 fps
- * e caminho estático com `prefers-reduced-motion`. Mesmo padrão do k9-lp.
+ * e caminho estático com `prefers-reduced-motion`.
  */
 export interface Stage {
   renderer: THREE.WebGLRenderer;

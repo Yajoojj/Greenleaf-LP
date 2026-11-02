@@ -47,7 +47,7 @@ export function Header() {
     return () => observer.disconnect();
   }, [nav]);
 
-  // Esc fecha; Tab fica preso no painel enquanto aberto (mesmo comportamento do k9-lp).
+  // Esc fecha; Tab fica preso no painel enquanto aberto.
   useEffect(() => {
     if (!open) return;
     const panel = panelRef.current;
