@@ -18,6 +18,10 @@ export interface DemoCase {
   classes: Record<ClassCode, number>;
 }
 
+/**
+ * Modelo que gerou as respostas gravadas de `DEMO_CASES`, não o modelo em produção.
+ * Só muda quando as respostas forem regravadas com `scripts/record-demo.mjs` do Greenleaf-Mobile.
+ */
 export const MODEL_VERSION = 'greenleaf_effb0-2026-10-28';
 
 export const DEMO_CASES: DemoCase[] = [
