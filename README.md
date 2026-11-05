@@ -63,5 +63,6 @@ public/         imagens do app, exemplos e fotos da equipe
 
 ## Equipe
 
-- Carlos Eduardo Campos Takeshita
+- Filipe de Oliveira Lima
 - Yago Uran Kurashiki Rios
+- Carlos Eduardo Campos Takeshita

@@ -285,6 +285,7 @@ export const en: Content = {
     title: { before: 'The people ', em: 'behind it.' },
     lead: 'Multiplatform Software Development students at FATEC Registro, in the Ribeira Valley.',
     members: [
+      { name: 'Filipe de Oliveira Lima', role: 'Front-end developer', bio: 'Front-end development, building modern, intuitive and functional interfaces for the people who use the app.', photo: '/team/filipe.webp' },
       { name: 'Yago Uran Kurashiki Rios', role: 'Full-stack developer', bio: 'Full-stack development. Works in IT and is deepening Java Spring Boot and React.', photo: '/team/yago.webp', github: 'https://github.com/Yajoojj' },
       { name: 'Carlos Eduardo Campos Takeshita', role: 'Back-end developer', bio: 'Software development focused on the back end and the MERN stack (MongoDB, Express, React and Node.js).', photo: '/team/carlos.webp' },
     ],

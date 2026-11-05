@@ -293,6 +293,7 @@ export const pt: Content = {
     title: { before: 'Quem está ', em: 'por trás.' },
     lead: 'Estudantes de Desenvolvimento de Software Multiplataforma da FATEC Registro, no Vale do Ribeira.',
     members: [
+      { name: 'Filipe de Oliveira Lima', role: 'Desenvolvedor front-end', bio: 'Desenvolvimento front-end, com interfaces modernas, intuitivas e funcionais para quem usa o app.', photo: '/team/filipe.webp' },
       { name: 'Yago Uran Kurashiki Rios', role: 'Desenvolvedor full-stack', bio: 'Desenvolvimento full-stack. Atua na área de TI e aprofunda Java Spring Boot e React.', photo: '/team/yago.webp', github: 'https://github.com/Yajoojj' },
       { name: 'Carlos Eduardo Campos Takeshita', role: 'Desenvolvedor back-end', bio: 'Desenvolvimento de software com foco no back-end e na stack MERN (MongoDB, Express, React e Node.js).', photo: '/team/carlos.webp' },
     ],
