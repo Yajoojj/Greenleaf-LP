@@ -27,9 +27,9 @@ export function Pitch() {
             />
           ) : (
             <button type="button" className="pitch__poster" onClick={() => setPlaying(true)}>
-              <img src={`https://i.ytimg.com/vi/${site.pitchVideoId}/hqdefault.jpg`} alt="" loading="lazy" />
+              <img src="/pitch-thumb.webp" alt="" loading="lazy" width={1280} height={720} />
               <span className="pitch__play"><Play width={28} height={28} /></span>
-              <span className="pitch__label">{video.play}<small>{video.caption}</small></span>
+              <span className="sr-only">{video.play} · {video.caption}</span>
             </button>
           )}
         </div>
