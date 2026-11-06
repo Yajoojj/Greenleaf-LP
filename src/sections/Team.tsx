@@ -19,7 +19,6 @@ export function Team() {
           {team.members.map((m, i) => (
             <li key={m.name} className="member" data-reveal style={{ transitionDelay: `${i * 90}ms` }}>
               <div className="member__photo">
-                <span className="member__index" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
                 <img src={m.photo} alt="" loading="lazy" width={640} height={800} />
               </div>
               <div className="member__body">

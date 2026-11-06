@@ -281,11 +281,6 @@
   transform-origin: 50% 100%; transition: transform 0.9s var(--ease-out);
 }
 .member:hover .member__photo img { transform: scale(1.035); }
-.member__index {
-  position: absolute; z-index: 1; top: 18px; left: 22px;
-  font-family: var(--font-serif); font-style: italic; font-size: 2.1rem; line-height: 1;
-  color: var(--sage);
-}
 .member__body { display: grid; gap: 10px; padding: 0 4px; }
 .member__role { display: inline-flex; align-items: center; gap: 10px; font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--leaf-800); font-weight: 600; }
 .member__role::before { content: ''; width: 18px; height: 1px; background: currentColor; }
